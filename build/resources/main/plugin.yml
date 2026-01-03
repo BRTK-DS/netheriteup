@@ -1,0 +1,14 @@
+name: NetheriteUp
+version: 0.1.0
+main: me.jheyvu.netheriteup.NetheriteUpPlugin
+api-version: 1.21
+
+commands:
+  nup:
+    description: NetheriteUp info
+    usage: /nup
+    permission: netheriteup.use
+
+permissions:
+  netheriteup.use:
+    default: true
