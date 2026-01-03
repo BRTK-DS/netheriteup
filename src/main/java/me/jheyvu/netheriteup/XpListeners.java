@@ -49,6 +49,8 @@ public class XpListeners implements Listener {
 
         ItemData.setLevel(plugin, held, level);
         ItemData.setXp(plugin, held, xp);
+
+        Progression.applyAutoUnlocks(held, level);
         LoreUpdater.apply(plugin, held);
     }
 }

@@ -77,6 +77,8 @@ public class XpOrbListener implements Listener {
         ItemData.setLevel(plugin, item, level);
         ItemData.setXp(plugin, item, xp);
 
+        Progression.applyAutoUnlocks(item, level);
+
         // Hover pasek
         LoreUpdater.apply(plugin, item);
     }

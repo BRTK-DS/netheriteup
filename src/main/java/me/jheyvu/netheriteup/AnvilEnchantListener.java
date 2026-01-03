@@ -53,15 +53,24 @@ public class AnvilEnchantListener implements Listener {
                 }
 
                 int current = merged.getOrDefault(ench, 0);
+                int vanillaMax = ench.getMaxLevel();
 
                 // vanilla-like łączenie poziomów
                 int newLvl;
                 if (current == addLvl) newLvl = current + 1;
                 else newLvl = Math.max(current, addLvl);
 
+                // zanim przekroczymy vanilla max, upewnij się że item już tam dotarł
+                if (newLvl > vanillaMax && current < vanillaMax) {
+                    newLvl = vanillaMax;
+                }
+
                 // cap z levela itemu
                 int cap = Progression.capFor(ench, level);
                 newLvl = Math.min(newLvl, cap);
+
+                // jeśli osiągnęliśmy vanilla max i mamy wymagany level, odblokuj wyższy tier
+                newLvl = Progression.autoUnlockLevel(ench, level, newLvl);
 
                 merged.put(ench, newLvl);
             }
