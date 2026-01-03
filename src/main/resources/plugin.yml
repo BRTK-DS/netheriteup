@@ -5,10 +5,12 @@ api-version: 1.21
 
 commands:
   nup:
-    description: NetheriteUp info
-    usage: /nup
+    description: NetheriteUp helper commands
+    usage: /nup setlevel <level>
     permission: netheriteup.use
 
 permissions:
   netheriteup.use:
     default: true
+  netheriteup.setlevel:
+    default: op

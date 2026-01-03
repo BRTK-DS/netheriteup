@@ -56,6 +56,9 @@ Poniższe wartości bazują na maksach z Minecraft Wiki i dodają maksymalnie +2
 5. **Kombinuj na kowadle** – wrzuć enchanted book + netheritowy item. AnvilEnchantListener scala enchanty vanilla-style, respektuje limit slotów i nowe capy.
 6. **Balans** – konflikty można mieszać dopiero od lvl 30, a Unbreaking/Looting nadal kończy się na 3, więc trzeba inwestować w grind, żeby robić naprawdę OP sety.
 
+## Komendy
+- `/nup setlevel <poziom>` – tylko dla operatorów; ustawia podany level na trzymanym netheritowym itemie, zeruje bieżące XP i od razu odświeża lore (przydatne do testów).
+
 ## Wymagania
 - Paper 1.21.x
 - Java 21
