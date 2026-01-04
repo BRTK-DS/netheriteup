@@ -15,17 +15,7 @@ public class Progression {
 
     static {
         cap(Enchantment.PROTECTION)
-                .at(30, 5)
-                .at(55, 6);
-
-        cap(Enchantment.FIRE_PROTECTION)
-                .at(40, 5);
-
-        cap(Enchantment.BLAST_PROTECTION)
-                .at(40, 5);
-
-        cap(Enchantment.PROJECTILE_PROTECTION)
-                .at(40, 5);
+                .at(45, 5);
 
         cap(Enchantment.FEATHER_FALLING)
                 .at(35, 5);
@@ -41,6 +31,9 @@ public class Progression {
         cap(Enchantment.FORTUNE)
                 .at(70, 4);
 
+        cap(Enchantment.LOOTING)
+                .at(40, 4);
+
         cap(Enchantment.SHARPNESS)
                 .at(35, 6)
                 .at(60, 7);
@@ -49,15 +42,8 @@ public class Progression {
                 .at(35, 6)
                 .at(60, 7);
 
-        cap(Enchantment.BANE_OF_ARTHROPODS)
-                .at(35, 6)
-                .at(60, 7);
-
         cap(Enchantment.SWEEPING_EDGE)
                 .at(45, 4);
-
-        cap(Enchantment.FIRE_ASPECT)
-                .at(50, 3);
     }
 
     public static int xpToNext(int level) {
