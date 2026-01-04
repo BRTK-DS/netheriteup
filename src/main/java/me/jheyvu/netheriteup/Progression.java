@@ -61,7 +61,7 @@ public class Progression {
     }
 
     public static int xpToNext(int level) {
-        return 150 + (level * 25) + (level * level * 4);
+        return 100 + (level * 15) + (level * level * 2);
     }
 
     // +1 slot co 10 lvl, max +5
