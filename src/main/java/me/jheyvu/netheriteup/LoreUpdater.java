@@ -1,16 +1,16 @@
 package me.jheyvu.netheriteup;
 
+import org.bukkit.ChatColor;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import net.kyori.adventure.text.format.NamedTextColor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class LoreUpdater {
 
-    private static final String START = NamedTextColor.DARK_GRAY  + "⟦NetheriteUp⟧";
-    private static final String END   = NamedTextColor.DARK_GRAY + "⟦/NetheriteUp⟧";
+    private static final String START = ChatColor.DARK_GRAY + "⟦NetheriteUp⟧";
+    private static final String END = ChatColor.DARK_GRAY + "⟦/NetheriteUp⟧";
 
     public static void apply(NetheriteUpPlugin plugin, ItemStack item) {
         ItemMeta meta = item.getItemMeta();
@@ -34,8 +34,8 @@ public class LoreUpdater {
         int filled = (int) Math.floor(pct * bars);
         if (filled > bars) filled = bars;
 
-        String bar = NamedTextColor.GREEN + "█".repeat(filled)
-                + NamedTextColor.DARK_GRAY + "░".repeat(bars - filled);
+        String bar = ChatColor.GREEN + "█".repeat(filled)
+                + ChatColor.DARK_GRAY + "░".repeat(bars - filled);
 
         int percent = (int) Math.round(pct * 100);
 
@@ -47,13 +47,13 @@ public class LoreUpdater {
         List<String> section = new ArrayList<>();
         section.add(START);
         // section.add(ChatColor.GOLD + "NetheriteUp");
-        section.add(NamedTextColor.YELLOW + "Lvl: " + NamedTextColor.WHITE + level);
-        section.add(NamedTextColor.YELLOW + "XP: " + NamedTextColor.WHITE + xp
-                + NamedTextColor.GRAY + "/" + next
-                + NamedTextColor.DARK_GRAY + " [" + bar + NamedTextColor.DARK_GRAY + "] "
-                + NamedTextColor.GRAY + percent + "%");
-        section.add(NamedTextColor.YELLOW + "Enchants: " + NamedTextColor.WHITE + used + NamedTextColor.GRAY + "/" + maxSlots);
-        section.add(NamedTextColor.YELLOW + "Conflicts: " + (conflicts ? NamedTextColor.GREEN + "ON" : NamedTextColor.RED + "OFF"));
+        section.add(ChatColor.YELLOW + "Lvl: " + ChatColor.WHITE + level);
+        section.add(ChatColor.YELLOW + "XP: " + ChatColor.WHITE + xp
+                + ChatColor.GRAY + "/" + next
+                + ChatColor.DARK_GRAY + " [" + bar + ChatColor.DARK_GRAY + "] "
+                + ChatColor.GRAY + percent + "%");
+        section.add(ChatColor.YELLOW + "Enchants: " + ChatColor.WHITE + used + ChatColor.GRAY + "/" + maxSlots);
+        section.add(ChatColor.YELLOW + "Conflicts: " + (conflicts ? ChatColor.GREEN + "ON" : ChatColor.RED + "OFF"));
         section.add(END);
 
         // Nie niszcz innych lore — usuń starą sekcję NetheriteUp i dopisz nową na końcu

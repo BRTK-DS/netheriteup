@@ -1,1 +1,22 @@
-.vscode/settings.json
+# Build outputs
+/build/
+**/build/
+/bin/
+/out/
+
+# Gradle caches
+/.gradle/
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.settings/
+.classpath
+.project
+.vscode/
+
+# OS junk
+Thumbs.db
+.DS_Store
