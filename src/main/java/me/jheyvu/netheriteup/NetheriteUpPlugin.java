@@ -21,6 +21,7 @@ public class NetheriteUpPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new XpListeners(this), this);
         getServer().getPluginManager().registerEvents(new XpOrbListener(this), this);
         getServer().getPluginManager().registerEvents(new AnvilEnchantListener(this), this);
+        getCommand("nup").setTabCompleter(new NupTabCompleter());
 
         getLogger().info("NetheriteUp enabled!");
     }
